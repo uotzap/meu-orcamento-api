@@ -4,11 +4,11 @@ from meu_orcamento_api.models.user import User, Users, QueryUser
 from tinydb import TinyDB, Query
 
 
-database = TinyDB('database.json')
+database = TinyDB('users.json')
 
 user = Blueprint('user', __name__, url_prefix='/users')
 
-spec = FlaskPydanticSpec('flask', title='Meu Orçamento :: API')
+spec = FlaskPydanticSpec('flask', title='Meu Orçamento :: /users')
 spec.register(user)
 
 
